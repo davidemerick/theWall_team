@@ -116,14 +116,18 @@ def message():
   mysql.query_db(query, data)
   return redirect('/wall')
 
-@app.route('/comment', methods = ['POST'])
-def comment(id):
+@app.route('/comment/<messages_id>', methods = ['POST'])
+def comment(messages_id):
+  print "you made it to comment route!"
   comment = request.form['comment']
+  print "test"
   user_id = session['user_id']
-  query = 'INSERT INTO comments (comment, created_at, updated_at, user_id) VALUES(:comment, NOW(), NOW(), :user_id)'
+  messIDtoDB = int(messages_id)
+  query = 'INSERT INTO comments (comment, created_at, updated_at, user_id, message_id) VALUES(:comment, NOW(), NOW(), :user_id, :messIDtoDB)'
   data = {
     'comment':comment,
-    'user_id':user_id
+    'user_id':user_id,
+    'messIDtoDB':messages_id
   }
   # sends info to database
   mysql.query_db(query, data)

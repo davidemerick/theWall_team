@@ -35,6 +35,36 @@
         {{ messages['time']}}
         {{ messages['message']}}
       {% endfor %}
+
+      <!-- -->
+        {% for messages in messageToWall %}
+            <div class="post_group">
+                <div class="message">
+                    <h3>{{ messages['first_name']}} {{ messages['last_name'] }}</h3>
+                    <p class="message_content">{{ messages['message'] }}</p>
+
+                    {% if messages['user_id'] == session['user_id'] %}
+                        <a href="/delete/{{messages['id']}}" class="delete_message"><button class="delete_button">Delete Message</button></a>
+                    {% endif %}
+                </div><!--  /.message -->
+                {% for comment in comments %}
+                    {% if comment['message_id'] == messages['id'] %}
+                    <div class="comment">
+                        <h3>{{ comment['first_name'] }} {{ comment['last_name'] }}</h3>
+                        <h5>{{"{: %I:%M %p %b %d, %Y}".format(comment['created_at']).replace(" 0", " ")}}</h5>
+                        <p class="comment_content">{{ comment['comment'] }}</p>
+                    </div><!--  /.comment -->
+                    {% endif %}          
+                {% endfor %}
+
+                <form action="/comment/{{ messages['id'] }}" method="POST" class="post_comment">
+                    <input type="text" name="comment">
+                    <input type="submit" value="Post Comment" class="comment_submit">
+                </form>
+            
+            </div><!--  /.post_group -->                
+            
+          {% endfor %}
     </div>
   </body>
 </html>
