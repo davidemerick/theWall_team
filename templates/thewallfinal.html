@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>NINJABOOK</title>
+    <link rel="stylesheet" href="thewall.css">
+  </head>
+  <body>
+    <div id="container">
+      <div class="main">
+        <div class="header">
+          <li><img class="side" src="shuriken.png" alt="knife"></li>
+          <li><img class= "logotp" src="logotp.png" alt=""></li>
+          <li><img class="side" src="shuriken.png" alt="knife"></li>
+        </div>
+        <div class="nav">
+          <ul>
+            <li>WELCOME {{session.user}} -San!</li>
+            <a href="#"><li>Log In</li></a>
+            <a href="#"><li>Log Out</li></a>
+          </ul>
+        </div>
+
+        <!---MESSAGE TIME---->
+        <div class="messagepost">
+          <p>Post your terribly witty message: </p>
+          <form action="index.html" method="post">
+            <textarea placeholder="Leave your Shurikens here..." rows="8" cols="80"></textarea>
+            <button type="submit" name="button">POST IT</button>
+          </form>
+        </div>
+
+        <!---User comment--->
+        <div class="commentpost">
+          <p>Chikatsu Saisei no Jutsu:</p>
+          <form action="index.html" method="post">
+            <textarea placeholder="Dattebayo..." rows="8" cols="80"></textarea>
+            <button type="submit" name="button">BELIEVE IT</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+  </body>
+</html>
