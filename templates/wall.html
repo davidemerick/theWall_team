@@ -47,12 +47,12 @@
                         <a href="/delete/{{messages['id']}}" class="delete_message"><button class="delete_button">Delete Message</button></a>
                     {% endif %}
                 </div><!--  /.message -->
-                {% for comment in comments %}
-                    {% if comment['message_id'] == messages['id'] %}
+                {% for comments in commentToWall %}
+                    {% if comments['message_id'] == messages['id'] %}
                     <div class="comment">
-                        <h3>{{ comment['first_name'] }} {{ comment['last_name'] }}</h3>
-                        <h5>{{"{: %I:%M %p %b %d, %Y}".format(comment['created_at']).replace(" 0", " ")}}</h5>
-                        <p class="comment_content">{{ comment['comment'] }}</p>
+                        <h3>{{ comments['first_name'] }} {{ comments['last_name'] }}</h3>
+                        <h5>{{"{: %I:%M %p %b %d, %Y}".format(comments['created_at']).replace(" 0", " ")}}</h5>
+                        <p class="comment_content">{{ comments['comment'] }}</p>
                     </div><!--  /.comment -->
                     {% endif %}          
                 {% endfor %}

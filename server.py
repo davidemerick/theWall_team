@@ -139,6 +139,11 @@ def wall():
     #query to pull info from db
     query = 'SELECT messages.id, messages.message, users.first_name, users.last_name, messages.user_id, DATE_FORMAT(messages.created_At, "%M %D %T") AS time FROM messages JOIN users ON users.id = messages.user_id;'
     messages = mysql.query_db(query)
+
+    ### this needs to be fixed
+    # query1 = 'SELECT comments.id, comments.message, users.first_name, users.last_name, comments.user_id, DATE_FORMAT(comments.created_At, "%M %D %T") AS time FROM comments JOIN users ON users.id = comments.user_id;'
+
+    #comments = mysql.query_db(query1)
     return render_template('wall.html', messageToWall = messages)
   else:
     return redirect('/')
