@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>NINJABOOK</title>
+    <link rel="stylesheet" href="wall.css">
+  </head>
+  <body>
+    <div id="container">
+      <div class="main">
+        <div class="header">
+          <li><img class="side" src="shuriken.png" alt="knife"></li>
+          <li><img class= "logotp" src="logotp.png" alt=""></li>
+          <li><img class="side" src="shuriken.png" alt="knife"></li>
+        </div>
+        <div class="nav">
+          <ul>
+            <li>WELCOME {{session.user}}-san!</li>
+            <a href="#"><li>Log In</li></a> /
+            <a href="#"><li>Log Out</li></a>
+          </ul>
+        </div>
+
+        <!--MESSAGE DATE/TIME-->
+        <div class="messagepost">
+          <p>Post your terribly witty message:</p>
+          <form action="index.html" method="post">
+            <textarea placeholder="Leave your shurikens here..." rows="8" cols="80"></textarea>
+            <button type="submit" class="button">POST IT</button>
+          </form>
+        </div>
+
+        <!--# User comment #-->
+        <div class="commentpost">
+          <p>Chikatsu Saisei no Jutsu:</p>
+          <form action="index.html" method="post">
+            <textarea placeholder="Dattebayo..." rows="8" cols="80"></textarea>
+            <button type="submit" class="button">BELIEVE IT</button>
+          </form>
+        </div>
+        <img src="ninja-silhouette.png" id="ninja-girl" alt="ninja girl">
+      </div>
+    </div>
+  </body>
+</html>

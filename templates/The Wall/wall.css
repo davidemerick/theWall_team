@@ -1,0 +1,126 @@
+body{
+    background: url(bloody_flag.jpg);
+    background-attachment: fixed;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-color: black;
+    opacity: 0.9;
+    margin: 10px;
+    height: 800px;
+}
+
+.main{
+    width: 1150px;
+    height: 1300px;
+    margin: 10px auto;
+    padding: 10px 15px;
+    vertical-align: top;
+    background-color: white;
+}
+
+.header{
+    text-align: center;
+    border-bottom: 2px dashed red;
+}
+
+.header li{
+    display: inline-block;
+    list-style: none;
+    text-decoration: none;
+}
+
+.side{
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.logotp{
+    width:65%;
+    vertical-align: top;
+}
+
+.nav{
+    margin: 20px 0px 0px 240px;
+    text-align: right;
+    vertical-align: top;
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+}
+
+.nav ul{
+    list-style: none;
+}
+
+.nav li{
+    display: inline-block;
+    margin: 0px 5px 0px 5px;
+}
+
+.nav a{
+    color: black;
+}
+
+textarea{
+    resize: none;
+    border: 1.5px solid black;
+    padding: 2px 4px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.button {
+   border-top: 1px solid #f7979c;
+   background: #000000;
+   background: -webkit-gradient(linear, left top, left bottom, from(#de1818), to(#000000));
+   background: -webkit-linear-gradient(top, #de1818, #000000);
+   background: -moz-linear-gradient(top, #de1818, #000000);
+   background: -ms-linear-gradient(top, #de1818, #000000);
+   background: -o-linear-gradient(top, #de1818, #000000);
+   padding: 6px 12px;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 12px;
+   font-family: Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   margin: -12px 0px 12px 0px;
+   }
+
+.button:hover {
+   border-top-color: #010203;
+   background: #010203;
+   color: #db3939;
+   }
+
+.button:active {
+   border-top-color: #a80202;
+   background: #a80202;
+   }
+
+.messagepost{
+    margin: 40px 10px 25px 10px;
+}
+
+.commentpost{
+    margin: 0px 35px;
+}
+
+p{
+    font-family: Papyrus,fantasy;
+    font-size: 20px;
+}
+
+#ninja-girl{
+    height: 65%;
+    bottom: 20px;
+    position: fixed;
+    resize: auto;
+    margin: -300px 0px 0px 630px;
+    opacity: 0.9;
+}
